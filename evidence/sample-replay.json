@@ -1,0 +1,648 @@
+{
+  "version": 1,
+  "rules": "adverteyes-demo-v1",
+  "events": [
+    {
+      "type": "start",
+      "id": "sample-local-race",
+      "seed": 42,
+      "at": 1000,
+      "timing": {
+        "answerMs": 12000,
+        "revealMs": 3000
+      }
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 0,
+        "choice": 2,
+        "revision": 1,
+        "attemptId": "sample-0",
+        "acceptedAt": 1000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 0
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 1,
+        "choice": 0,
+        "revision": 2,
+        "attemptId": "sample-1",
+        "acceptedAt": 16000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 1
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 2,
+        "choice": 2,
+        "revision": 3,
+        "attemptId": "sample-2",
+        "acceptedAt": 31000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 2
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 3,
+        "choice": 3,
+        "revision": 4,
+        "attemptId": "sample-3",
+        "acceptedAt": 46000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 3
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 4,
+        "choice": 1,
+        "revision": 5,
+        "attemptId": "sample-4",
+        "acceptedAt": 61000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 4
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 5,
+        "choice": 3,
+        "revision": 6,
+        "attemptId": "sample-5",
+        "acceptedAt": 76000
+      }
+    },
+    {
+      "type": "item",
+      "turn": 5
+    },
+    {
+      "type": "resolve",
+      "turn": 5
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 6,
+        "choice": 0,
+        "revision": 7,
+        "attemptId": "sample-6",
+        "acceptedAt": 91000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 6
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 7,
+        "choice": 3,
+        "revision": 8,
+        "attemptId": "sample-7",
+        "acceptedAt": 106000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 7
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 8,
+        "choice": 2,
+        "revision": 9,
+        "attemptId": "sample-8",
+        "acceptedAt": 121000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 8
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 9,
+        "choice": 1,
+        "revision": 10,
+        "attemptId": "sample-9",
+        "acceptedAt": 136000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 9
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 10,
+        "choice": 0,
+        "revision": 11,
+        "attemptId": "sample-10",
+        "acceptedAt": 151000
+      }
+    },
+    {
+      "type": "item",
+      "turn": 10
+    },
+    {
+      "type": "resolve",
+      "turn": 10
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 11,
+        "choice": 0,
+        "revision": 12,
+        "attemptId": "sample-11",
+        "acceptedAt": 166000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 11
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 12,
+        "choice": 2,
+        "revision": 13,
+        "attemptId": "sample-12",
+        "acceptedAt": 181000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 12
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 13,
+        "choice": 1,
+        "revision": 14,
+        "attemptId": "sample-13",
+        "acceptedAt": 196000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 13
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 14,
+        "choice": 3,
+        "revision": 15,
+        "attemptId": "sample-14",
+        "acceptedAt": 211000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 14
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 15,
+        "choice": 3,
+        "revision": 16,
+        "attemptId": "sample-15",
+        "acceptedAt": 226000
+      }
+    },
+    {
+      "type": "item",
+      "turn": 15
+    },
+    {
+      "type": "resolve",
+      "turn": 15
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 16,
+        "choice": 0,
+        "revision": 17,
+        "attemptId": "sample-16",
+        "acceptedAt": 241000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 16
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 17,
+        "choice": 1,
+        "revision": 18,
+        "attemptId": "sample-17",
+        "acceptedAt": 256000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 17
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 18,
+        "choice": 3,
+        "revision": 19,
+        "attemptId": "sample-18",
+        "acceptedAt": 271000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 18
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 19,
+        "choice": 2,
+        "revision": 20,
+        "attemptId": "sample-19",
+        "acceptedAt": 286000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 19
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 20,
+        "choice": 1,
+        "revision": 21,
+        "attemptId": "sample-20",
+        "acceptedAt": 301000
+      }
+    },
+    {
+      "type": "item",
+      "turn": 20
+    },
+    {
+      "type": "resolve",
+      "turn": 20
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 21,
+        "choice": 1,
+        "revision": 22,
+        "attemptId": "sample-21",
+        "acceptedAt": 316000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 21
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 22,
+        "choice": 3,
+        "revision": 23,
+        "attemptId": "sample-22",
+        "acceptedAt": 331000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 22
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 23,
+        "choice": 2,
+        "revision": 24,
+        "attemptId": "sample-23",
+        "acceptedAt": 346000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 23
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 24,
+        "choice": 0,
+        "revision": 25,
+        "attemptId": "sample-24",
+        "acceptedAt": 361000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 24
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 25,
+        "choice": 2,
+        "revision": 26,
+        "attemptId": "sample-25",
+        "acceptedAt": 376000
+      }
+    },
+    {
+      "type": "item",
+      "turn": 25
+    },
+    {
+      "type": "resolve",
+      "turn": 25
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 26,
+        "choice": 3,
+        "revision": 27,
+        "attemptId": "sample-26",
+        "acceptedAt": 391000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 26
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 27,
+        "choice": 2,
+        "revision": 28,
+        "attemptId": "sample-27",
+        "acceptedAt": 406000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 27
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 28,
+        "choice": 0,
+        "revision": 29,
+        "attemptId": "sample-28",
+        "acceptedAt": 421000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 28
+    },
+    {
+      "type": "answer",
+      "receipt": {
+        "turn": 29,
+        "choice": 1,
+        "revision": 30,
+        "attemptId": "sample-29",
+        "acceptedAt": 436000
+      }
+    },
+    {
+      "type": "resolve",
+      "turn": 29
+    }
+  ],
+  "state": {
+    "id": "sample-local-race",
+    "seed": 42,
+    "turn": 30,
+    "players": [
+      {
+        "id": "you",
+        "name": "YOU",
+        "progress": 222,
+        "correct": 24,
+        "item": "pulse",
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim1",
+        "name": "NOVA",
+        "progress": 202,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim2",
+        "name": "ATLAS",
+        "progress": 194,
+        "correct": 23,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim3",
+        "name": "LUMEN",
+        "progress": 242,
+        "correct": 29,
+        "item": "echo",
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim4",
+        "name": "ORBIT",
+        "progress": 172,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim5",
+        "name": "SAGE",
+        "progress": 212,
+        "correct": 24,
+        "item": "echo",
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim6",
+        "name": "EMBER",
+        "progress": 202,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim7",
+        "name": "FLUX",
+        "progress": 202,
+        "correct": 25,
+        "item": "echo",
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim8",
+        "name": "INDIGO",
+        "progress": 180,
+        "correct": 21,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim9",
+        "name": "SOL",
+        "progress": 190,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim10",
+        "name": "VERVE",
+        "progress": 158,
+        "correct": 20,
+        "item": "echo",
+        "queuedItem": null,
+        "expiredGrants": 1
+      },
+      {
+        "id": "sim11",
+        "name": "ECHO",
+        "progress": 182,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim12",
+        "name": "MICA",
+        "progress": 202,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim13",
+        "name": "ONYX",
+        "progress": 242,
+        "correct": 26,
+        "item": "pulse",
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim14",
+        "name": "LYRA",
+        "progress": 178,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim15",
+        "name": "PRISM",
+        "progress": 202,
+        "correct": 22,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      },
+      {
+        "id": "sim16",
+        "name": "ZEN",
+        "progress": 180,
+        "correct": 21,
+        "item": null,
+        "queuedItem": null,
+        "expiredGrants": 0
+      }
+    ],
+    "effects": [
+      {
+        "actor": "sim8",
+        "target": "sim14",
+        "item": "pulse",
+        "amount": 6
+      }
+    ],
+    "lastAnswers": {
+      "you": true,
+      "sim1": false,
+      "sim2": false,
+      "sim3": true,
+      "sim4": true,
+      "sim5": true,
+      "sim6": true,
+      "sim7": true,
+      "sim8": true,
+      "sim9": false,
+      "sim10": false,
+      "sim11": false,
+      "sim12": true,
+      "sim13": true,
+      "sim14": true,
+      "sim15": true,
+      "sim16": false
+    },
+    "milestones": [
+      75,
+      165
+    ]
+  },
+  "resultHash": "9fd4d69df44751dc330972281de4e3a7871430ea4e3c4b8e5960d101f5406204"
+}

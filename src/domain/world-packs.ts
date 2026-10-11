@@ -1,0 +1,78 @@
+import type {Question} from './questions.ts';
+export type WorldQuestion = Question & {evidence: string[]; validation: 'source-checked' | 'derived'};
+export const contentSources: Record<string,{title:string;url?:string;checked:string;basis:string}> = {
+ geometry:{title:'Original Euclidean geometry derivations',checked:'2026-10-10',basis:'Count sides; angle sum 180°; area scales by length squared; volume by length cubed.'},
+ logic:{title:'Original finite logic / probability derivations',checked:'2026-10-10',basis:'Enumerate stated equally likely outcomes, evaluate truth tables and explicit counterexamples; no empirical claim.'},
+ atmosphere:{title:'NASA: Planetary atmospheres',url:'https://science.nasa.gov/solar-system/10-things-planetary-atmospheres/',checked:'2026-10-10',basis:'Earth air is about 78% nitrogen.'},
+ dolphin:{title:'NOAA: Are dolphins fish?',url:'https://oceanservice.noaa.gov/facts/dolphin.html',checked:'2026-10-10',basis:'Dolphins are mammals and breathe through lungs.'},
+ prefixes:{title:'NIST: Metric SI prefixes',url:'https://www.nist.gov/pml/owm/metric-si-prefixes',checked:'2026-10-10',basis:'Kilo denotes 1000; milli denotes one thousandth.'},
+ sodium:{title:'Royal Society of Chemistry: Sodium',url:'https://periodic-table.rsc.org/element/11/',checked:'2026-10-10',basis:'Sodium has the chemical symbol Na.'},
+ eclipse:{title:'NASA: Eclipses and the Moon',url:'https://science.nasa.gov/moon/eclipses/?lv=true',checked:'2026-10-10',basis:'Solar eclipses put the Moon between Earth and Sun.'},
+ venus:{title:'NASA: Venus facts',url:'https://science.nasa.gov/venus/venus-facts/',checked:'2026-10-10',basis:'Venus has the hottest planetary surface in our solar system.'},
+ layers:{title:'USGS: The science of earthquakes',url:'https://www.usgs.gov/programs/earthquake-hazards/science-earthquakes',checked:'2026-10-10',basis:'Earth layers include crust, mantle, outer core and inner core.'},
+ dna:{title:'NHGRI: Base pair',url:'https://www.genome.gov/genetics-glossary/Base-Pair',checked:'2026-10-10',basis:'DNA pairs A with T and C with G.'},
+ plates:{title:'USGS: Understanding plate motions',url:'https://pubs.usgs.gov/gip/dynamic/understanding.html',checked:'2026-10-10',basis:'Divergent boundaries separate plates and generate new crust.'},
+ ocean:{title:'NOAA: Ocean acidification',url:'https://www.noaa.gov/ocean-acidification',checked:'2026-10-10',basis:'Absorbing additional carbon dioxide lowers ocean pH.'},
+ rna:{title:'NHGRI: Nucleotide',url:'https://www.genome.gov/genetics-glossary/Nucleotide',checked:'2026-10-10',basis:'RNA uses uracil in place of thymine.'},
+ ribosome:{title:'NHGRI: Ribosome',url:'https://www.genome.gov/genetics-glossary/Ribosome',checked:'2026-10-10',basis:'Ribosomes translate messenger RNA to synthesize proteins.'},
+ visible:{title:'NASA: Visible light',url:'https://science.nasa.gov/ems/09_visiblelight/',checked:'2026-10-10',basis:'Violet has shorter visible wavelengths than red.'},
+ waves:{title:'NASA: Electromagnetic Spectrum',url:'https://imagine.gsfc.nasa.gov/science/toolbox/emspectrum2.html',checked:'2026-10-10',basis:'Electromagnetic waves travel in vacuum; frequency and wavelength are related; shorter wavelengths have greater photon energy.'},
+ circuits:{title:'OpenStax: Resistors in series and parallel',url:'https://openstax.org/books/university-physics-volume-2/pages/10-2-resistors-in-series-and-parallel',checked:'2026-10-10',basis:'Series resistances add; parallel reciprocal resistances add.'},
+ gravity:{title:'NASA: Forces',url:'https://science.nasa.gov/universe/overview/forces/',checked:'2026-10-10',basis:'Gravity follows inverse-square distance dependence.'},
+ decay:{title:'NRC: Half-life',url:'https://www.nrc.gov/education-regulatory-research/glossary/half-life',checked:'2026-10-10',basis:'Half-life is the time for half the radioactive atoms to decay.'},
+ energy:{title:'OpenStax: Kinetic energy',url:'https://openstax.org/books/university-physics-volume-1/pages/7-2-kinetic-energy',checked:'2026-10-10',basis:'Nonrelativistic kinetic energy is half mass times speed squared.'},
+ orbit:{title:'NASA: Orbits and Kepler’s laws',url:'https://science.nasa.gov/solar-system/orbits-and-keplers-laws/',checked:'2026-10-10',basis:'For orbits around the same dominant central mass, period squared is proportional to semi-major axis cubed.'}
+};
+type Row=[string,string,string,string,string[],number,string,string[]];
+const rows:Row[]=[
+ ['GEOMETRY','How many interior angles does a hexagon have?','HEXAGON','The word hexagon.',['Five','Six','Seven','Eight'],1,'A hexagon has six sides and six vertices, with one interior angle at each vertex.',['geometry']],
+ ['EARTH','Which gas makes up most of Earth’s air?','AIR ≈ 78% ?','Air, approximately seventy-eight percent unknown gas.',['Oxygen','Carbon dioxide','Nitrogen','Hydrogen'],2,'Nitrogen makes up about 78% of Earth’s atmosphere.',['atmosphere']],
+ ['LIFE','A dolphin surfaces to breathe using…','🐬 ↑','A dolphin rising to the water surface.',['Lungs','Gills','Fins','Scales'],0,'A dolphin is a mammal and breathes air through lungs.',['dolphin']],
+ ['MEASUREMENT','One kilometer equals how many meters?','1 km = ? m','One kilometer equals an unknown number of meters.',['10','100','10,000','1,000'],3,'The SI prefix kilo means one thousand.',['prefixes']],
+ ['CHEMISTRY','Name the element behind this symbol.','Na','Chemical symbol capital N lowercase a.',['Nitrogen','Sodium','Neon','Nickel'],1,'Na is the chemical symbol for sodium.',['sodium']],
+ ['SPACE','This alignment can produce which eclipse on Earth?','SUN — MOON — EARTH','Sun, then Moon, then Earth in a line.',['Lunar','Neither','Solar','Both at once'],2,'The Moon can block sunlight reaching Earth, producing a solar eclipse.',['eclipse']],
+ ['PLANETS','Which planet has the hottest surface?','☿  ♀  ⊕  ♂','Mercury, Venus, Earth and Mars symbols.',['Mercury','Earth','Mars','Venus'],3,'Venus’s heat-trapping atmosphere makes its surface hotter than Mercury’s.',['venus']],
+ ['EARTH','What lies directly below Earth’s crust?','CRUST\n────────\n?','A cross-section with crust above an unknown layer.',['Mantle','Outer core','Inner core','Atmosphere'],0,'The mantle lies beneath the crust.',['layers']],
+ ['GENETICS','Complete this DNA base pair.','C ↔ ?','DNA base C paired with an unknown base.',['A','G','T','U'],1,'Cytosine pairs with guanine in DNA.',['dna']],
+ ['GEOLOGY','Name this plate-boundary motion.','←  │  →','Two plates moving away from their shared boundary.',['Convergent','Transform','Divergent','Stationary'],2,'Plates moving apart form a divergent boundary.',['plates']],
+ ['OCEAN','Extra dissolved CO₂ generally makes ocean pH…','CO₂ ↑ → pH ?','Increasing dissolved carbon dioxide, unknown pH direction.',['Fall','Rise','Stay fixed','Become zero'],0,'Additional dissolved carbon dioxide increases acidity, lowering pH.',['ocean']],
+ ['GENETICS','RNA uses which base in place of thymine?','DNA: T → RNA: ?','DNA thymine replaced by an unknown RNA base.',['Guanine','Cytosine','Adenine','Uracil'],3,'RNA uses uracil where DNA uses thymine.',['rna']],
+ ['CELL BIOLOGY','Which structure reads mRNA to build proteins?','mRNA → ? → PROTEIN','Messenger RNA flows through an unknown structure to protein.',['Lysosome','Ribosome','Cell wall','Centriole'],1,'Ribosomes read messenger RNA and assemble amino acids into proteins.',['ribosome']],
+ ['LIGHT','Which visible color has the shortest wavelength?','RED → ORANGE → BLUE → VIOLET','Four visible colors ordered from red to violet.',['Red','Orange','Violet','Blue'],2,'Violet occupies the short-wavelength end of visible light.',['visible']],
+ ['SCALING','Double a square’s side. Its area becomes…','s → 2s','A square’s side length changes from s to two s.',['2×','8×','½×','4×'],3,'Area is side squared, so doubling the side multiplies area by four.',['geometry']],
+ ['DENSITY','Which sample has greater mass per volume?','A: 6 g / 3 mL\nB: 6 g / 2 mL','Sample A: six grams in three milliliters. B: six grams in two milliliters.',['B','A','Equal','Cannot tell'],0,'A is 2 g/mL and B is 3 g/mL; B has greater density.',['logic']],
+ ['WAVES','At fixed wave speed, doubling frequency makes wavelength…','v = fλ','Wave speed equals frequency times wavelength; speed stays fixed.',['Double','Halve','Quadruple','Unchanged'],1,'Keeping f times wavelength constant means twice the frequency requires half the wavelength.',['waves','logic']],
+ ['GEOMETRY','Find the third angle of this Euclidean triangle.','50° + 60° + ?','Triangle angles of fifty degrees, sixty degrees and an unknown.',['50°','60°','70°','80°'],2,'The three angles total 180 degrees; 180 minus 110 is 70.',['geometry']],
+ ['CIRCUITS','Two resistors in series: total resistance?','—[2Ω]—[3Ω]—','Two-ohm and three-ohm resistors connected in series.',['1Ω','6Ω','1.2Ω','5Ω'],3,'Series resistances add: 2 plus 3 equals 5 ohms.',['circuits']],
+ ['CIRCUITS','Two 6Ω resistors in parallel: equivalent resistance?','6Ω ∥ 6Ω','Two six-ohm resistors connected in parallel.',['3Ω','6Ω','12Ω','36Ω'],0,'Two equal resistors in parallel have half either resistance: 3 ohms.',['circuits']],
+ ['PROBABILITY','Two independent fair coins: probability of two heads?','H/T × H/T','Two independent fair coin tosses.',['½','¼','¾','1'],1,'HH is one of four equally likely outcomes: HH, HT, TH and TT.',['logic']],
+ ['PROBABILITY','Draw uniformly twice without replacement. Chance of two reds?','BAG: R R B','A bag contains two red balls and one blue ball; draws are uniform.',['½','⅔','⅓','¼'],2,'The chance is 2/3 for the first red times 1/2 for the second, giving 1/3.',['logic']],
+ ['LOGIC','All A are B; some B are C. Must some A be C?','A ⊆ B; B ∩ C ≠ ∅','A is contained in B, and B overlaps C.',['Yes, always','Only if A exists','No A can be C','Not necessarily'],3,'The overlap of B and C can lie entirely outside A, so the conclusion need not hold.',['logic']],
+ ['INFERENCE','Ice-cream sales and sunburn rise together. Does that prove causation?','SALES ↑  SUNBURN ↑','Two quantities increase together.',['No','Yes, sales cause it','Yes, burns cause it','Both cause each other'],0,'A common cause such as sunny weather can raise both without either causing the other.',['logic']],
+ ['GENETICS','Double-stranded DNA: A is 30%. What percentage is C?','A = 30%\nA=T, C=G','A is thirty percent; A equals T and C equals G.',['10%','20%','30%','40%'],1,'T is also 30%, leaving 40% shared equally by C and G: 20% each.',['dna','logic']],
+ ['LIGHT','Halve a photon’s wavelength. Its energy becomes…','E = hc / λ','Photon energy equals h times c divided by wavelength.',['½×','Unchanged','2×','4×'],2,'Photon energy is inversely proportional to wavelength, so it doubles.',['waves','logic']],
+ ['GRAVITY','Double separation of two fixed point masses. Force becomes…','F ∝ 1/r²','Gravitational force is inversely proportional to separation squared.',['2×','½×','4×','¼×'],3,'The denominator becomes four times larger, so force falls to one quarter.',['gravity','logic']],
+ ['NUCLEAR SCIENCE','After two half-lives, roughly what fraction remains undecayed?','N → ½N → ?','An initially large radioactive sample undergoes two half-lives.',['¼','½','⅛','None'],0,'Each half-life halves the expected remaining number; half of half is one quarter.',['decay','logic']],
+ ['MOTION','Same mass, ordinary speeds: double speed. Kinetic energy becomes…','E = ½mv²','Classical kinetic energy formula; mass stays fixed.',['2×','4×','8×','½×'],1,'With fixed mass, classical kinetic energy scales as speed squared.',['energy','logic']],
+ ['ORBITS','Same star: 4× the semi-major axis gives what period ratio?','T² ∝ a³','Orbital period squared is proportional to semi-major axis cubed.',['2×','4×','8×','16×'],2,'Four cubed is 64; the period ratio is the square root of 64, or eight.',['orbit','logic']],
+ ['LOGIC','Which is equivalent to “if P, then Q”?','P ⇒ Q','An implication from P to Q.',['Q ⇒ P','¬P ⇒ ¬Q','P ⇒ ¬Q','¬Q ⇒ ¬P'],3,'The contrapositive, if not Q then not P, has the same truth values.',['logic']],
+ ['SCALING','Double a cube’s edge. Surface-area-to-volume ratio becomes…','AREA ∝ s²\nVOLUME ∝ s³','Cube area scales as side squared; volume as side cubed.',['½×','2×','4×','Unchanged'],0,'Area grows fourfold and volume eightfold, so the ratio is halved.',['geometry','logic']],
+ ['PROBABILITY','Two independent fair six-sided dice: chance their sum is seven?','SUM = 7','Two independent fair six-sided dice, faces one through six.',['1/12','1/6','1/7','1/9'],1,'Six ordered pairs sum to seven, out of 36 equally likely pairs: 1/6.',['logic']],
+ ['CONDITIONAL CHANCE','Two independent fair coins: at least one head. Chance both are heads?','HH  HT  TH','Possible outcomes after excluding TT.',['½','¼','⅓','⅔'],2,'Conditioning excludes TT, leaving HH, HT and TH equally likely. Only HH has two heads.',['logic']],
+ ['COMBINATORICS','Choose two of six distinct symbols. Order does not matter.','6 CHOOSE 2','Choose an unordered pair from six different symbols.',['12','30','36','15'],3,'There are 6 times 5 ordered choices, but each unordered pair is counted twice: 15.',['logic']],
+ ['NUMBER THEORY','What is the remainder of 2¹⁰ divided by 3?','2 ≡ −1 (mod 3)','Two is congruent to negative one modulo three.',['1','0','2','3'],0,'Two is minus one modulo three; an even power of minus one is one.',['logic']],
+ ['COMPUTING','XOR gives 1 where bits differ. Which output is correct?','1010 XOR 1100','XOR outputs one where the input bits differ.',['1110','0110','1000','0011'],1,'Comparing corresponding bits gives 0, 1, 1, 0.',['logic']],
+ ['LINEAR ALGEBRA','What is this matrix’s determinant?','[1  2]\n[2  4]','Two by two matrix with rows one, two and two, four.',['2','4','0','−2'],2,'The second row is twice the first; equivalently, 1×4 minus 2×2 is zero.',['logic']],
+ ['LOGIC','When is “P implies Q” false?','P ⇒ Q','The logical implication if P then Q.',['P false, Q false','P false, Q true','P true, Q true','P true, Q false'],3,'An implication is false precisely when its premise is true and its conclusion is false.',['logic']],
+ ['CONDITIONAL CHANCE','Two independent fair six-sided dice, both ≥3. Chance their sum is 8?','EACH DIE: 3,4,5,6','Two independent fair six-sided dice, conditioned on both results being at least three.',['3/16','1/6','1/4','3/8'],0,'Sixteen ordered pairs remain. Exactly (3,5), (4,4) and (5,3) sum to eight: 3/16.',['logic']]
+];
+const authored:WorldQuestion[]=rows.map((r,i)=>({id:`wt-${i+1}`,category:r[0],prompt:r[1],visual:r[2],alt:r[3],choices:r[4],answer:r[5],explanation:r[6],evidence:r[7],difficulty:1+Math.floor(i/8),validation:r[7].every(k=>k==='logic'||k==='geometry')?'derived':'source-checked',rights:'Original wording and typographic diagrams; no third-party visual assets. Difficulty is an uncalibrated estimate.'}));
+// Fixed, versioned per-question Fisher–Yates permutations; never a visible key cycle.
+const all = authored.map((question,index) => {
+ let seed=(0x6a09e667 ^ Math.imul(index+1,0x9e3779b1))>>>0;
+ const order=[0,1,2,3];
+ for(let i=3;i>0;i--){seed^=seed<<13;seed^=seed>>>17;seed^=seed<<5;const j=(seed>>>0)%(i+1);[order[i],order[j]]=[order[j],order[i]];}
+ return {...question,choices:order.map(i=>question.choices[i]),answer:order.indexOf(question.answer)};
+});
+export const worldPacks=[{id:'first-light',name:'First Light'},{id:'crossroads',name:'Crossroads'},{id:'hidden-systems',name:'Hidden Systems'},{id:'summit',name:'The Summit'}].map((p,i)=>({...p,questions:all.slice(i*10,i*10+10)}));
+export function packById(id:string){const pack=worldPacks.find(p=>p.id===id);if(!pack)throw new Error('Unknown question pack');return pack;}

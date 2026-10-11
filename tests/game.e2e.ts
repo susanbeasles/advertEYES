@@ -1,0 +1,34 @@
+import { test, expect } from '@playwright/test';
+test('keyboard play, repeated submission, reload receipt, reveal and screenshots', async ({ page }) => {
+    const errors: string[] = [];
+    page.on('pageerror', e => errors.push(e.message));
+    await page.goto('/');
+    await expect(page.getByRole('heading', { name: 'Outthink the field.' })).toBeVisible();
+    await page.screenshot({ path: 'evidence/lobby-desktop.png', fullPage: true });
+    await page.getByRole('button', { name: 'Enter World Tour' }).focus();
+    await page.keyboard.press('Enter');
+    await expect(page.getByRole('heading', { name: 'How many interior angles does a hexagon have?' })).toBeVisible();
+    const six = page.getByRole('button', { name: /[ABCD] Six/ });
+    await six.focus();
+    await page.keyboard.press('Enter');
+    await expect(page.getByText('Received. You can still change your answer.')).toBeVisible();
+    await six.click();
+    await six.click();
+    await page.reload();
+    await expect(page.getByRole('button', { name: /[ABCD] Six/ })).toHaveAttribute('aria-pressed', 'true');
+    await page.screenshot({ path: 'evidence/race-desktop.png', fullPage: true });
+    await expect(page.getByText('Correct. +10 progress')).toBeVisible({ timeout: 20000 });
+    await page.screenshot({ path: 'evidence/reveal-desktop.png', fullPage: true });
+    expect(errors).toEqual([]);
+});
+test('mobile layout and reduced motion remain playable', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    await page.goto('/');
+    await page.getByRole('button', { name: 'Enter World Tour' }).click();
+    await expect(page.getByRole('heading', { name: 'How many interior angles does a hexagon have?' })).toBeVisible();
+    await page.getByRole('button', { name: /[ABCD] Six/ }).click();
+    await expect(page.getByText('Received. You can still change your answer.')).toBeVisible();
+    expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+    await page.screenshot({ path: 'evidence/race-mobile.png', fullPage: true });
+});

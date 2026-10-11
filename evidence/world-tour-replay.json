@@ -1,0 +1,1497 @@
+{
+  "version": 1,
+  "rules": "adverteyes-world-tour-v1",
+  "manifest": {
+    "version": 1,
+    "id": "world-tour-demo",
+    "seed": 42,
+    "at": 1000,
+    "timing": {
+      "answerMs": 15000,
+      "revealMs": 1500,
+      "breakMs": 60000
+    },
+    "contentHashes": [
+      "41accbaada72fe83183803d3573117ac60d18547cd25d361958c14a78d7b0d49",
+      "44fa315bb0f2bbfcd1720d49fe5d5efaba6a345f1eeb771d54f2a70010c68d3e",
+      "e03f8af440bbb7e573f37f6c9136bed7276e70b8a62fc2731b4f5a6362fa263f",
+      "be5c9452a544ef3728ca72c6f62ab9acedb61505706f695e952fc41f45d90e72"
+    ]
+  },
+  "packs": [
+    {
+      "version": 1,
+      "rules": "adverteyes-world-pack-v1",
+      "events": [
+        {
+          "type": "start",
+          "id": "world-tour-demo",
+          "seed": 42,
+          "at": 1000,
+          "timing": {
+            "answerMs": 15000,
+            "revealMs": 1500,
+            "breakMs": 60000
+          },
+          "packId": "first-light"
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 0,
+            "choice": 1,
+            "revision": 1,
+            "attemptId": "world-0",
+            "acceptedAt": 1000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 0
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 1,
+            "choice": 3,
+            "revision": 2,
+            "attemptId": "world-1",
+            "acceptedAt": 17500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 1
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 2,
+            "choice": 3,
+            "revision": 3,
+            "attemptId": "world-2",
+            "acceptedAt": 34000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 2
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 3,
+            "choice": 3,
+            "revision": 4,
+            "attemptId": "world-3",
+            "acceptedAt": 50500
+          }
+        },
+        {
+          "type": "item",
+          "turn": 3
+        },
+        {
+          "type": "resolve",
+          "turn": 3
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 4,
+            "choice": 3,
+            "revision": 5,
+            "attemptId": "world-4",
+            "acceptedAt": 67000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 4
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 5,
+            "choice": 0,
+            "revision": 6,
+            "attemptId": "world-5",
+            "acceptedAt": 83500
+          }
+        },
+        {
+          "type": "item",
+          "turn": 5
+        },
+        {
+          "type": "resolve",
+          "turn": 5
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 6,
+            "choice": 3,
+            "revision": 7,
+            "attemptId": "world-6",
+            "acceptedAt": 100000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 6
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 7,
+            "choice": 3,
+            "revision": 8,
+            "attemptId": "world-7",
+            "acceptedAt": 116500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 7
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 8,
+            "choice": 1,
+            "revision": 9,
+            "attemptId": "world-8",
+            "acceptedAt": 133000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 8
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 9,
+            "choice": 0,
+            "revision": 10,
+            "attemptId": "world-9",
+            "acceptedAt": 149500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 9
+        }
+      ],
+      "state": {
+        "id": "world-tour-demo",
+        "seed": 42,
+        "turn": 10,
+        "players": [
+          {
+            "id": "you",
+            "name": "YOU",
+            "progress": 68,
+            "correct": 8,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim1",
+            "name": "NOVA",
+            "progress": 92,
+            "correct": 10,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim2",
+            "name": "ATLAS",
+            "progress": 76,
+            "correct": 9,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim3",
+            "name": "LUMEN",
+            "progress": 92,
+            "correct": 10,
+            "item": "pulse",
+            "queuedItem": "pulse",
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim4",
+            "name": "ORBIT",
+            "progress": 82,
+            "correct": 9,
+            "item": "pulse",
+            "queuedItem": "pulse",
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim5",
+            "name": "SAGE",
+            "progress": 92,
+            "correct": 10,
+            "item": "pulse",
+            "queuedItem": "pulse",
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim6",
+            "name": "EMBER",
+            "progress": 86,
+            "correct": 10,
+            "item": "pulse",
+            "queuedItem": "pulse",
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim7",
+            "name": "FLUX",
+            "progress": 68,
+            "correct": 10,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim8",
+            "name": "INDIGO",
+            "progress": 76,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim9",
+            "name": "SOL",
+            "progress": 70,
+            "correct": 9,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim10",
+            "name": "VERVE",
+            "progress": 56,
+            "correct": 8,
+            "item": "echo",
+            "queuedItem": "surge",
+            "expiredGrants": 1
+          },
+          {
+            "id": "sim11",
+            "name": "ECHO",
+            "progress": 92,
+            "correct": 10,
+            "item": "pulse",
+            "queuedItem": "pulse",
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim12",
+            "name": "MICA",
+            "progress": 82,
+            "correct": 9,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim13",
+            "name": "ONYX",
+            "progress": 76,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim14",
+            "name": "LYRA",
+            "progress": 92,
+            "correct": 10,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim15",
+            "name": "PRISM",
+            "progress": 82,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim16",
+            "name": "ZEN",
+            "progress": 72,
+            "correct": 8,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          }
+        ],
+        "effects": [
+          {
+            "actor": "sim13",
+            "target": "sim7",
+            "item": "pulse",
+            "amount": 6
+          },
+          {
+            "actor": "sim15",
+            "target": "sim7",
+            "item": "echo",
+            "amount": 6
+          },
+          {
+            "actor": "sim7",
+            "target": "sim2",
+            "item": "pulse",
+            "amount": 6
+          }
+        ],
+        "lastAnswers": {
+          "you": true,
+          "sim1": true,
+          "sim2": true,
+          "sim3": true,
+          "sim4": false,
+          "sim5": true,
+          "sim6": true,
+          "sim7": true,
+          "sim8": false,
+          "sim9": true,
+          "sim10": true,
+          "sim11": true,
+          "sim12": false,
+          "sim13": true,
+          "sim14": true,
+          "sim15": true,
+          "sim16": true
+        },
+        "milestones": [
+          25,
+          55.00000000000001
+        ]
+      },
+      "resultHash": "d1ea5fc3b5737f0c157b5117a7ed314c5793f565e2985a888b5cc466ca20a8e5"
+    },
+    {
+      "version": 1,
+      "rules": "adverteyes-world-pack-v1",
+      "events": [
+        {
+          "type": "start",
+          "id": "world-tour-demo",
+          "seed": 43,
+          "at": 226000,
+          "timing": {
+            "answerMs": 15000,
+            "revealMs": 1500,
+            "breakMs": 60000
+          },
+          "packId": "crossroads"
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 0,
+            "choice": 0,
+            "revision": 11,
+            "attemptId": "world-10",
+            "acceptedAt": 226000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 0
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 1,
+            "choice": 2,
+            "revision": 12,
+            "attemptId": "world-11",
+            "acceptedAt": 242500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 1
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 2,
+            "choice": 1,
+            "revision": 13,
+            "attemptId": "world-12",
+            "acceptedAt": 259000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 2
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 3,
+            "choice": 1,
+            "revision": 14,
+            "attemptId": "world-13",
+            "acceptedAt": 275500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 3
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 4,
+            "choice": 3,
+            "revision": 15,
+            "attemptId": "world-14",
+            "acceptedAt": 292000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 4
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 5,
+            "choice": 0,
+            "revision": 16,
+            "attemptId": "world-15",
+            "acceptedAt": 308500
+          }
+        },
+        {
+          "type": "item",
+          "turn": 5
+        },
+        {
+          "type": "resolve",
+          "turn": 5
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 6,
+            "choice": 2,
+            "revision": 17,
+            "attemptId": "world-16",
+            "acceptedAt": 325000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 6
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 7,
+            "choice": 1,
+            "revision": 18,
+            "attemptId": "world-17",
+            "acceptedAt": 341500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 7
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 8,
+            "choice": 0,
+            "revision": 19,
+            "attemptId": "world-18",
+            "acceptedAt": 358000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 8
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 9,
+            "choice": 0,
+            "revision": 20,
+            "attemptId": "world-19",
+            "acceptedAt": 374500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 9
+        }
+      ],
+      "state": {
+        "id": "world-tour-demo",
+        "seed": 43,
+        "turn": 10,
+        "players": [
+          {
+            "id": "you",
+            "name": "YOU",
+            "progress": 62,
+            "correct": 8,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim1",
+            "name": "NOVA",
+            "progress": 66,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim2",
+            "name": "ATLAS",
+            "progress": 76,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim3",
+            "name": "LUMEN",
+            "progress": 72,
+            "correct": 8,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim4",
+            "name": "ORBIT",
+            "progress": 72,
+            "correct": 8,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim5",
+            "name": "SAGE",
+            "progress": 56,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim6",
+            "name": "EMBER",
+            "progress": 76,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim7",
+            "name": "FLUX",
+            "progress": 56,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim8",
+            "name": "INDIGO",
+            "progress": 70,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim9",
+            "name": "SOL",
+            "progress": 58,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim10",
+            "name": "VERVE",
+            "progress": 62,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim11",
+            "name": "ECHO",
+            "progress": 72,
+            "correct": 8,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim12",
+            "name": "MICA",
+            "progress": 62,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim13",
+            "name": "ONYX",
+            "progress": 32,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim14",
+            "name": "LYRA",
+            "progress": 54,
+            "correct": 7,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim15",
+            "name": "PRISM",
+            "progress": 44,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim16",
+            "name": "ZEN",
+            "progress": 64,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          }
+        ],
+        "effects": [
+          {
+            "actor": "sim1",
+            "target": "you",
+            "item": "pulse",
+            "amount": 6
+          },
+          {
+            "actor": "sim2",
+            "target": "sim5",
+            "item": "echo",
+            "amount": 6
+          },
+          {
+            "actor": "sim5",
+            "target": "sim2",
+            "item": "pulse",
+            "amount": 6
+          },
+          {
+            "actor": "sim6",
+            "target": "sim5",
+            "item": "pulse",
+            "amount": 6
+          }
+        ],
+        "lastAnswers": {
+          "you": true,
+          "sim1": true,
+          "sim2": true,
+          "sim3": true,
+          "sim4": true,
+          "sim5": false,
+          "sim6": true,
+          "sim7": true,
+          "sim8": true,
+          "sim9": false,
+          "sim10": false,
+          "sim11": false,
+          "sim12": true,
+          "sim13": false,
+          "sim14": false,
+          "sim15": true,
+          "sim16": true
+        },
+        "milestones": [
+          25,
+          55.00000000000001
+        ]
+      },
+      "resultHash": "9a1b8b4a53514580bb40be36cbad5a2b02db7847f28508fcf27dfca2e94d9c11"
+    },
+    {
+      "version": 1,
+      "rules": "adverteyes-world-pack-v1",
+      "events": [
+        {
+          "type": "start",
+          "id": "world-tour-demo",
+          "seed": 44,
+          "at": 451000,
+          "timing": {
+            "answerMs": 15000,
+            "revealMs": 1500,
+            "breakMs": 60000
+          },
+          "packId": "hidden-systems"
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 0,
+            "choice": 1,
+            "revision": 21,
+            "attemptId": "world-20",
+            "acceptedAt": 451000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 0
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 1,
+            "choice": 3,
+            "revision": 22,
+            "attemptId": "world-21",
+            "acceptedAt": 467500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 1
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 2,
+            "choice": 0,
+            "revision": 23,
+            "attemptId": "world-22",
+            "acceptedAt": 484000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 2
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 3,
+            "choice": 2,
+            "revision": 24,
+            "attemptId": "world-23",
+            "acceptedAt": 500500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 3
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 4,
+            "choice": 0,
+            "revision": 25,
+            "attemptId": "world-24",
+            "acceptedAt": 517000
+          }
+        },
+        {
+          "type": "item",
+          "turn": 4
+        },
+        {
+          "type": "resolve",
+          "turn": 4
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 5,
+            "choice": 1,
+            "revision": 26,
+            "attemptId": "world-25",
+            "acceptedAt": 533500
+          }
+        },
+        {
+          "type": "item",
+          "turn": 5
+        },
+        {
+          "type": "resolve",
+          "turn": 5
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 6,
+            "choice": 0,
+            "revision": 27,
+            "attemptId": "world-26",
+            "acceptedAt": 550000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 6
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 7,
+            "choice": 3,
+            "revision": 28,
+            "attemptId": "world-27",
+            "acceptedAt": 566500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 7
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 8,
+            "choice": 0,
+            "revision": 29,
+            "attemptId": "world-28",
+            "acceptedAt": 583000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 8
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 9,
+            "choice": 2,
+            "revision": 30,
+            "attemptId": "world-29",
+            "acceptedAt": 599500
+          }
+        },
+        {
+          "type": "item",
+          "turn": 9
+        },
+        {
+          "type": "resolve",
+          "turn": 9
+        }
+      ],
+      "state": {
+        "id": "world-tour-demo",
+        "seed": 44,
+        "turn": 10,
+        "players": [
+          {
+            "id": "you",
+            "name": "YOU",
+            "progress": 76,
+            "correct": 9,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim1",
+            "name": "NOVA",
+            "progress": 60,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim2",
+            "name": "ATLAS",
+            "progress": 38,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim3",
+            "name": "LUMEN",
+            "progress": 50,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim4",
+            "name": "ORBIT",
+            "progress": 72,
+            "correct": 8,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim5",
+            "name": "SAGE",
+            "progress": 40,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim6",
+            "name": "EMBER",
+            "progress": 30,
+            "correct": 3,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim7",
+            "name": "FLUX",
+            "progress": 20,
+            "correct": 2,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim8",
+            "name": "INDIGO",
+            "progress": 70,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim9",
+            "name": "SOL",
+            "progress": 80,
+            "correct": 10,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim10",
+            "name": "VERVE",
+            "progress": 74,
+            "correct": 9,
+            "item": "pulse",
+            "queuedItem": "pulse",
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim11",
+            "name": "ECHO",
+            "progress": 78,
+            "correct": 10,
+            "item": "pulse",
+            "queuedItem": "echo",
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim12",
+            "name": "MICA",
+            "progress": 50,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim13",
+            "name": "ONYX",
+            "progress": 60,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim14",
+            "name": "LYRA",
+            "progress": 42,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim15",
+            "name": "PRISM",
+            "progress": 60,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim16",
+            "name": "ZEN",
+            "progress": 36,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          }
+        ],
+        "effects": [
+          {
+            "actor": "sim12",
+            "target": "sim2",
+            "item": "echo",
+            "amount": 6
+          },
+          {
+            "actor": "sim3",
+            "target": "sim16",
+            "item": "pulse",
+            "amount": 6
+          },
+          {
+            "actor": "sim9",
+            "target": "you",
+            "item": "pulse",
+            "amount": 6
+          },
+          {
+            "actor": "you",
+            "target": "sim11",
+            "item": "pulse",
+            "amount": 6
+          }
+        ],
+        "lastAnswers": {
+          "you": true,
+          "sim1": true,
+          "sim2": true,
+          "sim3": true,
+          "sim4": true,
+          "sim5": false,
+          "sim6": false,
+          "sim7": false,
+          "sim8": true,
+          "sim9": true,
+          "sim10": true,
+          "sim11": true,
+          "sim12": true,
+          "sim13": false,
+          "sim14": true,
+          "sim15": true,
+          "sim16": false
+        },
+        "milestones": [
+          25,
+          55.00000000000001
+        ]
+      },
+      "resultHash": "77881ece66d721cc9493b9464e100d098e449d4024b605cc52ed3bc1834ffa4c"
+    },
+    {
+      "version": 1,
+      "rules": "adverteyes-world-pack-v1",
+      "events": [
+        {
+          "type": "start",
+          "id": "world-tour-demo",
+          "seed": 45,
+          "at": 676000,
+          "timing": {
+            "answerMs": 15000,
+            "revealMs": 1500,
+            "breakMs": 60000
+          },
+          "packId": "summit"
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 0,
+            "choice": 0,
+            "revision": 31,
+            "attemptId": "world-30",
+            "acceptedAt": 676000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 0
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 1,
+            "choice": 3,
+            "revision": 32,
+            "attemptId": "world-31",
+            "acceptedAt": 692500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 1
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 2,
+            "choice": 0,
+            "revision": 33,
+            "attemptId": "world-32",
+            "acceptedAt": 709000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 2
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 3,
+            "choice": 1,
+            "revision": 34,
+            "attemptId": "world-33",
+            "acceptedAt": 725500
+          }
+        },
+        {
+          "type": "item",
+          "turn": 3
+        },
+        {
+          "type": "resolve",
+          "turn": 3
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 4,
+            "choice": 3,
+            "revision": 35,
+            "attemptId": "world-34",
+            "acceptedAt": 742000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 4
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 5,
+            "choice": 2,
+            "revision": 36,
+            "attemptId": "world-35",
+            "acceptedAt": 758500
+          }
+        },
+        {
+          "type": "item",
+          "turn": 5
+        },
+        {
+          "type": "resolve",
+          "turn": 5
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 6,
+            "choice": 2,
+            "revision": 37,
+            "attemptId": "world-36",
+            "acceptedAt": 775000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 6
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 7,
+            "choice": 0,
+            "revision": 38,
+            "attemptId": "world-37",
+            "acceptedAt": 791500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 7
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 8,
+            "choice": 2,
+            "revision": 39,
+            "attemptId": "world-38",
+            "acceptedAt": 808000
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 8
+        },
+        {
+          "type": "answer",
+          "receipt": {
+            "turn": 9,
+            "choice": 0,
+            "revision": 40,
+            "attemptId": "world-39",
+            "acceptedAt": 824500
+          }
+        },
+        {
+          "type": "resolve",
+          "turn": 9
+        }
+      ],
+      "state": {
+        "id": "world-tour-demo",
+        "seed": 45,
+        "turn": 10,
+        "players": [
+          {
+            "id": "you",
+            "name": "YOU",
+            "progress": 68,
+            "correct": 8,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim1",
+            "name": "NOVA",
+            "progress": 50,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim2",
+            "name": "ATLAS",
+            "progress": 48,
+            "correct": 8,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim3",
+            "name": "LUMEN",
+            "progress": 60,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim4",
+            "name": "ORBIT",
+            "progress": 54,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim5",
+            "name": "SAGE",
+            "progress": 50,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim6",
+            "name": "EMBER",
+            "progress": 40,
+            "correct": 4,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim7",
+            "name": "FLUX",
+            "progress": 62,
+            "correct": 8,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim8",
+            "name": "INDIGO",
+            "progress": 40,
+            "correct": 4,
+            "item": "pulse",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim9",
+            "name": "SOL",
+            "progress": 30,
+            "correct": 3,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim10",
+            "name": "VERVE",
+            "progress": 40,
+            "correct": 4,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim11",
+            "name": "ECHO",
+            "progress": 40,
+            "correct": 4,
+            "item": "echo",
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim12",
+            "name": "MICA",
+            "progress": 30,
+            "correct": 3,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim13",
+            "name": "ONYX",
+            "progress": 70,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim14",
+            "name": "LYRA",
+            "progress": 42,
+            "correct": 5,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim15",
+            "name": "PRISM",
+            "progress": 56,
+            "correct": 7,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          },
+          {
+            "id": "sim16",
+            "name": "ZEN",
+            "progress": 60,
+            "correct": 6,
+            "item": null,
+            "queuedItem": null,
+            "expiredGrants": 0
+          }
+        ],
+        "effects": [],
+        "lastAnswers": {
+          "you": true,
+          "sim1": false,
+          "sim2": true,
+          "sim3": false,
+          "sim4": false,
+          "sim5": true,
+          "sim6": true,
+          "sim7": true,
+          "sim8": true,
+          "sim9": false,
+          "sim10": true,
+          "sim11": true,
+          "sim12": false,
+          "sim13": true,
+          "sim14": false,
+          "sim15": false,
+          "sim16": false
+        },
+        "milestones": [
+          25,
+          55.00000000000001
+        ]
+      },
+      "resultHash": "731c0e8787b91ca1a49b4e58859cdb9a2ea61be0ecb3be20091d4ac8f0d0d6a8"
+    }
+  ],
+  "resultHash": "39075faeb99dc0c9c07d4094c00a2115e6d643257d4a2fe96f79504fe1084219"
+}

@@ -1,0 +1,9 @@
+node_modules/
+.npm-cache/
+dist/
+.data/
+test-results/
+playwright-report/
+
+evidence/*.log
+evidence/browser-attempts.txt
